@@ -26,6 +26,7 @@ public class HomeController {
       }
       @PostMapping("/process")
       public String processForm(@Valid Course course, BindingResult result) {
+        System.out.println(result.toString());
         if(result.hasErrors()) {
             return "courseform";
         }
